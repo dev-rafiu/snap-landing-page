@@ -1,0 +1,137 @@
+@use "variables" as *;
+
+.header {
+  justify-content: space-between;
+  width: min(90%, 1200px);
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  .nav {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: var(--transition);
+  }
+
+  .nav__links {
+    background-color: var(--almost-white);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    height: 100%;
+    width: 50%;
+    margin-left: auto;
+    position: relative;
+    padding: 5rem 1.5rem;
+
+    li:nth-of-type(6),
+    li:nth-of-type(5) {
+      width: 100%;
+      text-align: center;
+    }
+
+    li:nth-of-type(5) {
+      margin-top: 2rem;
+    }
+
+    a:hover {
+      color: var(--almost-black);
+    }
+
+    a.border {
+      border: 1px solid var(--medium-gray);
+      border-radius: 15px;
+      display: inline-block;
+      width: 100%;
+      padding: 0.6rem 1rem;
+      // text-align: center;
+
+      &:hover {
+        border-color: var(--almost-black);
+      }
+    }
+  }
+  .menu-btn {
+    transition: var(--transition);
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.close-menu {
+  display: none;
+}
+
+// toggle classes
+.display .open-menu {
+  display: none;
+}
+.display .close-menu {
+  display: block;
+}
+.display .nav {
+  transform: translateX(0);
+}
+// ####
+
+.main-content {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .img-hero-container {
+    height: 25rem;
+    margin-bottom: 2rem;
+
+    .img-hero {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .img-hero.desktop {
+    display: none;
+  }
+  h1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  p {
+    color: var(--medium-gray);
+    max-width: 25rem; //500px
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    line-height: 1.2;
+  }
+
+  a.learn-more {
+    background: var(--almost-black);
+    color: var(--almost-white);
+    padding: 0.8rem 1.5rem;
+    display: inline-block;
+    border-radius: 15px;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+    margin-top: 1rem;
+
+    &:hover {
+      background: transparent;
+      color: var(--almost-black);
+      border: 1px solid var(--almost-black);
+    }
+  }
+
+  .partners {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5rem 1rem;
+  }
+}

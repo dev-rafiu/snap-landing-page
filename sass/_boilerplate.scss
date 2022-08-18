@@ -1,0 +1,44 @@
+@use "variables" as *;
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: sans-serif;
+  font-family: "Epilogue", sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+ul,
+a {
+  color: var(--medium-gray);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
