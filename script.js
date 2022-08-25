@@ -21,4 +21,5 @@ const header = document.querySelector(".header");
 const nav = document.querySelector(".nav");
 menuBtn.addEventListener("click", () => {
   header.classList.toggle("display");
+  console.log(123);
 });

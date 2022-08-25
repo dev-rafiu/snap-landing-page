@@ -15,14 +15,17 @@
     }
   }
 }
-.arrow-down {
+
+.arrow-up {
   display: none;
 }
+
 .display-arrow .arrow-down {
-  display: block;
-}
-.display-arrow .arrow-up {
   display: none;
+}
+
+.display-arrow .arrow-up {
+  display: block;
 }
 
 .drop-down-menu-container {
